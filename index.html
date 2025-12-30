@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ruota della Fortuna</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="top50">
+      
+<!-- Barra categoria con pulsanti mini -->
+<div id="categoria" class="catBar">
+  <div class="catLeft">
+    <span id="testoCategoria">Categoria</span>
+    <span id="numeroFrase" style="margin-left:8px; color:#fff; font-weight:600;"></span>
+  </div>
+
+  <div class="catActions">
+    <button id="btnCambiaFrase" class="miniBtn" title="Scegli un'altra frase">Cambia frase</button>
+    <button id="btnToggleLog" class="miniBtn" title="Mostra/Nascondi log azioni">Log azioni</button>
+  </div>
+</div>
+
+<!-- Pannello log (collassabile) -->
+<div id="logPanel" hidden>
+  <div id="logList"></div>
+</div>
+
+      <div id="tabellone"></div>
+    </div>
+
+    <div class="bottom50">
+      <div class="left">
+        <div class="leftGrid">
+          <div class="punteggiCol">
+            <div id="giocatoriPunteggi"></div>
+          </div>
+          <div class="pulsantiCol">
+            <div class="controlli vertical">
+              <button id="btnRuota">Gira la ruota</button>
+              <button id="btnVocale">Compra vocale (500€)</button>
+              <button id="btnRisposta">Inserisci risposta</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="rightStack">
+          <div id="infoBox" class="messaggio">Tocca la ruota per girarla</div>
+          <div id="ruotaHalf">
+            <div id="ruotaContainer" class="fullWheel">
+              <svg id="ruotaSvg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+                <g id="wheelRotGroup" transform="rotate(0 50 50)"></g>
+              </svg>
+            </div>
+            <div id="frecciaFissa">▼</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	
+  <script src="frasi_data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
